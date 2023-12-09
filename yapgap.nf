@@ -1,5 +1,20 @@
-#!/usr/bin/usr/bin/env
+#!/usr/bin/env nextflow
+
+nextflow.enable.dsl = 2
+
+include { PLANT_GENOMEANNOTATOR } from './workflows/plant_genomeannotator'
 
 
-WorkflowMain.initialise(params)
+workflow YAPGA {
+    
+    PLANT_GENOMEANNOTATOR()
+	
+}
+
+
+
+workflow {
+    YAPGA()
+}
+
 
