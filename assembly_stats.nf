@@ -1,7 +1,0 @@
-process BLOBTOOLKIT{
-
-
-
-
-
-}
