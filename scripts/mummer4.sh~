@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#PBS -N Blanks_microbiome
+#PBS -l select=1:ncpus=24
+#PBS -l walltime=12:00:00
+
+set -ex
+
+ref=$1
+qry=$2
+prefix="${1%.*}"
+
+echo ${prefix}
