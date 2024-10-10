@@ -1,20 +1,19 @@
 #!/bin/bash
-#PBS -N Blanks_microbiome
-#PBS -l select=1:ncpus=24
+#PBS -N Btk
+#PBS -l select=1:ncpus=48
 #PBS -l walltime=12:00:00
-set -eu
+#set -xu
 
 
 
-threads=24
-query="/new-home/andhlovu/DB_REF/Zostera_GenomeFiles/Zcap_polished_subsammple.fasta"
+threads=48
+query="/home/andhlovu/DB_REF/Zostera_GenomeFiles/Zcap_reduced_v4.fa"
+#query="/home/andhlovu/DB_REF/Zostera_GenomeFiles/extract_Zcap_reduced_v3.fasta"
 BlobDir="/home/andhlovu/Cape-Dwarf-Eelgrass-Genome-Annotation-Project/BlobToolKit/Zostera_capensis"
-bam_files=$(ls /home/andhlovu/Test/*.bam)
+bam_files=$(ls /new-home/andhlovu/DB_REF/BAM/Zcapensis/*.bam)
 output_dir="/home/andhlovu/Cape-Dwarf-Eelgrass-Genome-Annotation-Project/BlobToolKit/"
-ASSEMBLY_NAME=Zcap_draft2
+ASSEMBLY_NAME=Zcap_draft4
 busco_path="${output_dir}/BUSCO_$(basename "${query}")"
-
-
 
 
 #https://blobtoolkit.genomehubs.org/blobtools2/blobtools2-tutorials/adding-data-to-a-dataset/adding-hits/
