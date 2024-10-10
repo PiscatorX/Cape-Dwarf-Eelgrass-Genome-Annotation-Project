@@ -1,4 +1,4 @@
-# Cape-Dwarf-Eelgrass-Genome-Project
+# Cape-Dwarf Eelgrass Genome Annotation
 Annotation of Zostera capensis genome
 Taxonomy ID: 214524
 
